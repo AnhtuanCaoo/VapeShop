@@ -5,31 +5,17 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Saltnic's World</h2>
-                </div>
-                <div class="pull-right">
-                    <a class="btn btn-success" href="{{ route('juices.create') }}" title="Create a juice">Create a juice <i class="fas fa-plus-circle"></i>
-                        </a>
+                    <h2>User Management</h2>
                 </div>
             </div>
         </div>
     
-        @if ($message = Session::get('success'))
-            <div class="alert alert-success">   
-                <p>{{ $message }}</p>
-            </div>
-        @endif
-    
         <table class="table table-bordered table-responsive-lg" style="margin-top: 10px">
             <tr>
               <td>ID</td>
-              <td>Product name</td>
+              <td>Name</td>
               <td>Number</td>
-              <td>Image</td>
-              <td>Nicotin</td>
-              <td>Flavor</td>
-              <td>Brand</td>
-              <td>Price</td>
+              <td>Email</td>
               <td>Sell Price</td>
                 <th width="120px">Action</th>
             </tr>

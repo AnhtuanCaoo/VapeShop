@@ -45,40 +45,39 @@ class JuiceController extends Controller
             'brand' => 'required',
             'price' => 'required',
             'sellingprice' => 'required',
-            'description' => 'required'
         ]);
 
         Juice :: create($request->all());
-        return redirect()->route('juiceManagement.app')->with('success','Created!!');
+        return redirect()->route('juices.index')->with('success','Created!!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Juice  $juice
      * @return \Illuminate\Http\Response
      */
     public function show(Juice $juice)
     {
-        return view('juiceManagement.show',compact('product'));
+        return view('juiceManagement.show',compact('juice'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Juice  $juice
      * @return \Illuminate\Http\Response
      */
     public function edit(Juice $juice)
-    {
-        return view('juiceManagement.edit',compact('product'));
+    {   
+        return view('juiceManagement.edit',compact('juice'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Juice  $juice
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Juice $juice)
@@ -92,22 +91,21 @@ class JuiceController extends Controller
             'brand' => 'required',
             'price' => 'required',
             'sellingPrice' => 'required',
-            'description' => 'required'
         ]);
 
         $juice->update($request->all());
-        return redirect()->route('juiceManagement.app')->with('success','Updated!!');
+        return redirect()->route('juices.index')->with('success','Updated!!');
     }
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Juice  $juice
      * @return \Illuminate\Http\Response
      */
     public function destroy(Juice $juice)
     {
         $juice->delete();
 
-        return redirect()->route('juiceManagement.app')->with('success','Delete!!');
+        return redirect()->route('juices.index')->with('success','Delete!!');
     }
 }

@@ -54,7 +54,7 @@ class KitController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Kit  $product
      * @return \Illuminate\Http\Response
      */
     public function show(Kit $kit)
@@ -65,7 +65,7 @@ class KitController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Kit  $product
      * @return \Illuminate\Http\Response
      */
     public function edit(Kit $kit)
@@ -77,7 +77,7 @@ class KitController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Kit  $product
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Kit $kit)
@@ -100,7 +100,7 @@ class KitController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Kit  $product
      * @return \Illuminate\Http\Response
      */
     public function destroy(Kit $kit)

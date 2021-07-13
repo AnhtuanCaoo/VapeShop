@@ -21,8 +21,7 @@ class CreateJuiceTable extends Migration
             $table->integer('nicotin');
             $table->string('flavor');
             $table->string('brand');
-            $table->double('price');
-            $table->double('Sell Price');
+            $table->double('sellingprice');
             $table->timestamps();
         });
     }
