@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\JuiceController;
 use App\Models\ProductJuice;
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route;   
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +25,4 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::resource('/juices', ['middleware'=>'auth', JuiceController::class,'index']);
+Route::resource('/juices', JuiceController::class);  
