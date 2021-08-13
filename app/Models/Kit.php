@@ -9,5 +9,5 @@ class Kit extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['_token'];
+    
 }
